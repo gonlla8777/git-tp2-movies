@@ -20,7 +20,13 @@ function getFirstTenMovies(){
  * @returns {Array}
  */
  function getMoviesWithGenre(genre){
-    //complete with your code
+    let moviesNames = []
+    movies.forEach (moviesElement => {
+        if (moviesElement.genre.indexOf(genre) > -1){
+            moviesNames.push(moviesElement.title);
+        }
+    })
+    return moviesNames
 }
 
 function main(){
